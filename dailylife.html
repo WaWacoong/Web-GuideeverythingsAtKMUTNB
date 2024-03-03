@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style1.css">
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="ed33b776-1dfa-4a29-9f28-04dfe4e26de8";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <script src="./ham-menu.js"></script>
     <title>ชีวิตประจำวัน</title>
 </head>
 <body>
@@ -12,12 +13,12 @@
         <div class="logo">
             <img src="./images/LogoGuide 1.png" alt="LogoGuide">
         </div>
-        <ul>
-            <li><a class="hover-underline-animation" href="./index.html">Home</a></li>
-            <li><a class="hover-underline-animation" href="./education.html">การศึกษา</a></li>
-            <li><a class="hover-underline-animation" href="./selfdevelopment.html">การพัฒนาตัวเอง</a></li>
-            <li><a class="hover-underline-animation active" href="./dailylife.html">ชีวิตประจำวัน</a></li>
-        </ul>
+        <div class="menu" id="myMenu">
+            <div><a class="hover-underline-animation" href="./index.html">Home</a></div>
+            <div><a class="hover-underline-animation" href="./education.html">การศึกษา</a></div>
+            <div><a class="hover-underline-animation" href="./selfdevelopment.html">การพัฒนาตัวเอง</a></div>
+            <div><a class="hover-underline-animation active" href="./dailylife.html">ชีวิตประจำวัน</a></div>
+          </div>
         <div class="search">
             <input type="text">
             <span>
@@ -28,6 +29,11 @@
             <span>
               <img src="./images/Search.png" alt="Search">  
           </span>
+          </div>
+          <div class="ham-menu" onclick="toggleHam(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
           </div>
     </header>
     <div class="container">

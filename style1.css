@@ -2,16 +2,17 @@
 body{
     background: #FFFEF5;
 }
-header ul{
+header .menu{
     display: flex;
-    list-style-type: none;
     gap: 35px;
     align-items: center;
+    margin-left: 69px;
 }
-header ul li a{
+header .menu a{
     text-decoration: none;
-    font-size: 24px;
+    font-size: 26px;
     color: #000;
+    font-family: Besley;
 }
 header .hover-underline-animation{
     position: relative;
@@ -262,10 +263,53 @@ footer .coppy{
 .container .content1_mobile_self, .container .content1_mobile_life{
     display: none;
 }
+.ham-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {opacity: 0;}
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+@media only screen and (min-width: 1025px){
+    .ham-menu{
+        display: none;
+    }
+}
 /* Tablet */
 @media only screen and (max-width: 1024px){
-    header ul li a{
-        font-size: 20px;
+    header .menu{
+        display: none;
+    }
+    header .menu-active{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    header .menu-active div a{
+        font-size: 32px;
+    }
+    header .menu div{
+        padding: 10px;
     }
     header .search input{
         min-width: 236px;
@@ -280,6 +324,7 @@ footer .coppy{
         gap: 28px;
     }
     header .search{
+        display: none;
         max-width: 236px;
         height: 36px;
         margin-left: 78px;
@@ -329,8 +374,8 @@ footer .coppy{
 }
 /* Mobile */
 @media only screen and (max-width: 430px){
-    header ul li a{
-        font-size: 14px;
+    header .menu div a{
+        font-size: 20px;
         font-family: "Besley", serif;
     }
     header .search{
@@ -345,7 +390,7 @@ footer .coppy{
         padding-left: 16px;
     }
     .mobile_search{
-        display: block;
+        display: none;
         margin-left: 12px;
     }
     .mobile_search span img{
