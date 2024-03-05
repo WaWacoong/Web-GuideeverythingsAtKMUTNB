@@ -296,6 +296,16 @@ footer .coppy{
 }
 /* Tablet */
 @media only screen and (max-width: 1024px){
+    header .change .bar1 {
+        transform: translate(0, 14px) rotate(134deg);
+      }
+      header .change .bar3 {
+        transform: translate(0, -17px) rotate(43deg);
+      }
+    header .bar1, .bar2, .bar3{
+        width: 50px;
+        height: 10px;
+    }
     header .menu{
         display: none;
     }
@@ -374,6 +384,24 @@ footer .coppy{
 }
 /* Mobile */
 @media only screen and (max-width: 430px){
+    header .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      header .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      
+      /* Fade out the second bar */
+      header .change .bar2 {opacity: 0;}
+      
+      /* Rotate last bar */
+      header .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
     header .menu div a{
         font-size: 20px;
         font-family: "Besley", serif;
